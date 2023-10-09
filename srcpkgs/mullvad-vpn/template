@@ -1,0 +1,43 @@
+# Template file for 'mullvad-vpn'
+pkgname=mullvad-vpn
+version=2023.4
+revision=1
+archs="x86_64"
+hostmakedepends=""
+makedepends=""
+depends="gtk+3 iputils libnotify nss"
+short_desc="The Mullvad VPN client app for desktop"
+maintainer="spiderforrest <spider@spood.org>"
+license="GPL-3.0-or-later"
+homepage="mullvad.net"
+#changelog=""
+distfiles="https://github.com/mullvad/mullvadvpn-app/releases/download/${version}/MullvadVPN-${version}_amd64.deb"
+checksum=ecda227eb5f5ff7a542474d82bed9d568b3fa05b0a898c328421a2d3b4ac1213
+
+
+do_install() {
+    # avoid the space
+    mv "opt/Mullvad VPN" opt/Mullvad-VPN
+
+    vmkdir "opt/Mullvad-VPN"
+    vlicense "opt/Mullvad-VPN/LICENSE.electron.txt"
+    vlicense "opt/Mullvad-VPN/LICENSES.chromium.html"
+
+    vmkdir usr/bin
+    vinstall usr/bin/mullvad 755 usr/bin
+    vinstall usr/bin/mullvad-daemon 755 usr/bin
+    vinstall usr/bin/mullvad-exclude 755 usr/bin
+
+    vcopy 'opt/Mullvad-VPN/' opt
+
+    # just patch the desktop file to not use the space in "Mullvad VPN"
+    vsed -i "usr/share/applications/mullvad-vpn.desktop" -e "s|/opt/Mullvad VPN|/opt/Mullvad-VPN|"
+
+    # chromium/electron junk
+    chmod 4755 "${DESTDIR}/opt/Mullvad-VPN/chrome-sandbox"
+
+    vinstall usr/share/applications/mullvad-vpn.desktop 644 usr/share/applications
+    vcompletion usr/share/bash-completion/completions/mullvad bash
+
+    vsv mullvad
+}

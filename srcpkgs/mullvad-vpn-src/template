@@ -1,0 +1,26 @@
+# Template file for 'mullvad-vpn'
+pkgname=mullvad-vpn
+version=2023.4
+revision=1
+archs="x86_64"
+# hostmakedepends=""
+# makedepends="cargo go protobuf pkgconf dbus-devel dbus-libs"
+makedepends="cargo go protobuf pkgconf dbus-devel volta"
+depends="gtk+3 iputils libnotify nss"
+short_desc="The Mullvad VPN client app for desktop"
+maintainer="spiderforrest <spider@spood.org>"
+license="GPL-3.0-or-later"
+homepage="mullvad.net"
+#changelog=""
+distfiles="https://github.com/mullvad/mullvadvpn-app/archive/refs/tags/${version}.tar.gz"
+checksum=b35e2f8a60e302c393484ed42880737ce0f1b36e5d6731e1b39947903e472ef6
+
+
+do_build() {
+  git 
+  sh -c "./build.sh --optimize"
+}
+
+do_install() {
+  echo "hmm"
+}

@@ -1,0 +1,47 @@
+# Template file for 'bibata-cursor-theme'
+pkgname=bibata-cursor-theme
+version=2.0.4
+revision=1
+short_desc="Material Based Cursor Theme"
+maintainer="spiderforrest <spider@spood.org>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/ful1e5/Bibata_Cursor"
+#changelog=""
+distfiles="https://github.com/ful1e5/Bibata_Cursor/releases/download/v${version}/Bibata.tar.xz"
+checksum=af21e99d6bdda372e24ed8734f21e9fd6f09fcf9d6f1f47d0043dcd8c1e00959
+
+
+
+do_install() {
+
+# no idea why this doesn't work, i tried
+  # local item
+  # for item in \
+  #     Bibata-Modern-Amber \
+  #     Bibata-Modern-Classic \
+  #     Bibata-Modern-Ice \
+  #     Bibata-Original-Amber \
+  #     Bibata-Original-Classic \
+  #     Bibata-Original-Ice \
+  # do
+    # vinstall "${item}/index.theme" 644 "/usr/share/icons/${item}"
+    # vcopy "${item}/cursors" "/usr/share/icons/${item}"
+  # done
+    vinstall Bibata-Modern-Amber/index.theme 644 /usr/share/icons/Bibata-Modern-Amber
+    vcopy Bibata-Modern-Amber/cursors /usr/share/icons/Bibata-Modern-Amber
+
+    vinstall Bibata-Original-Amber/index.theme 644 /usr/share/icons/Bibata-Original-Amber
+    vcopy Bibata-Original-Amber/cursors /usr/share/icons/Bibata-Original-Amber
+
+    vinstall Bibata-Modern-Classic/index.theme 644 /usr/share/icons/Bibata-Modern-Classic
+    vcopy Bibata-Modern-Classic/cursors /usr/share/icons/Bibata-Modern-Classic
+
+    vinstall Bibata-Original-Classic/index.theme 644 /usr/share/icons/Bibata-Original-Classic
+    vcopy Bibata-Original-Classic/cursors /usr/share/icons/Bibata-Original-Classic
+
+    vinstall Bibata-Modern-Ice/index.theme 644 /usr/share/icons/Bibata-Modern-Ice
+    vcopy Bibata-Modern-Ice/cursors /usr/share/icons/Bibata-Modern-Ice
+
+    vinstall Bibata-Original-Ice/index.theme 644 /usr/share/icons/Bibata-Original-Ice
+    vcopy Bibata-Original-Ice/cursors /usr/share/icons/Bibata-Original-Ice
+}
