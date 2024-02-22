@@ -1,6 +1,6 @@
 # Template file for 'telegram-desktop'
 pkgname=telegram-desktop
-version=4.10.1
+version=4.14.15
 revision=2
 build_style=cmake
 build_helper="qemu gir"
@@ -25,12 +25,13 @@ license="GPL-3.0-or-later, OpenSSL"
 homepage="https://desktop.telegram.org/"
 changelog="https://github.com/telegramdesktop/tdesktop/blob/v${version}/changelog.txt"
 distfiles="https://github.com/telegramdesktop/tdesktop/releases/download/v${version}/tdesktop-${version}-full.tar.gz"
-checksum=4716a0fc0612c1e773bb4a6755eeee2fd1eba5a4a34c78db07ada749976267d4
+checksum=969b7e4d22229717ea7b210e3c429f25fd5d06ec61ef3030f993e8f912c1ebe6
 
 build_options="spellcheck"
 build_options_default="spellcheck"
 
 case $XBPS_TARGET_MACHINE in
+	armv6*) configure_args+=" -DDESKTOP_APP_DISABLE_SCUDO=true";; # Requires armv6k+ due to yield
 	mips*) broken="unsupported";;
 esac
 

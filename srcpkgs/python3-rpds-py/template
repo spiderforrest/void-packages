@@ -1,7 +1,7 @@
 # Template file for 'python3-rpds-py'
 pkgname=python3-rpds-py
-version=0.10.3
-revision=2
+version=0.17.1
+revision=1
 build_style=python3-pep517
 build_helper=rust
 hostmakedepends="cargo maturin"
@@ -14,7 +14,7 @@ license="MIT"
 homepage="https://github.com/crate-py/rpds"
 changelog="https://github.com/crate-py/rpds/releases"
 distfiles="${PYPI_SITE}/r/rpds-py/rpds_py-${version}.tar.gz"
-checksum=fcc1ebb7561a3e24a6588f7c6ded15d80aec22c66a070c757559b57b17ffd1cb
+checksum=0210b2668f24c078307260bf88bdac9d6f1093635df5123789bfee4d8d7fc8e7
 
 post_install() {
 	vlicense LICENSE
