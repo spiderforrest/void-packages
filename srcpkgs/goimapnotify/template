@@ -1,6 +1,6 @@
 # Template file for 'goimapnotify'
 pkgname=goimapnotify
-version=2.3.12
+version=2.3.16
 revision=1
 build_style=go
 go_import_path="gitlab.com/shackra/goimapnotify"
@@ -10,4 +10,4 @@ license="GPL-3.0-only"
 homepage="https://gitlab.com/shackra/goimapnotify"
 changelog="https://gitlab.com/shackra/goimapnotify/blob/master/CHANGELOG.rst"
 distfiles="https://${go_import_path}/-/archive/${version}/${pkgname}-${version}.tar.gz"
-checksum=54fd9aadebb7cbe470718dc10dba4c550e918f7d1bcbda3663c375c61c48bd86
+checksum=11908445d8136c1d7620b9704c5f5deab68f85875808c9fe959f3b6531c35dbf

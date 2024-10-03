@@ -1,7 +1,7 @@
 # Template file for 'subfinder'
 pkgname=subfinder
-version=2.6.5
-revision=1
+version=2.6.6
+revision=2
 build_wrksrc=v2
 build_style=go
 go_import_path="github.com/projectdiscovery/subfinder/v2"
@@ -12,7 +12,7 @@ license="MIT"
 homepage="https://github.com/projectdiscovery/subfinder"
 changelog="https://github.com/projectdiscovery/subfinder/releases"
 distfiles="https://github.com/projectdiscovery/subfinder/archive/refs/tags/v${version}.tar.gz"
-checksum=acd9ccdbb9b5877cf3568ad299ce0a3445ccced09583280dfd881cffd20859f9
+checksum=636bccb8b5a18b709f735f29979e53752f3d71e1c246b7ce845d802766937bf2
 
 post_install() {
 	vlicense ../LICENSE.md

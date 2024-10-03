@@ -1,6 +1,6 @@
 # Template file for 'delta'
 pkgname=delta
-version=0.17.0
+version=0.18.2
 revision=1
 build_style=cargo
 build_helper=qemu
@@ -14,11 +14,7 @@ maintainer="Andrew Benson <abenson+void@gmail.com>"
 license="MIT"
 homepage="https://github.com/dandavison/delta"
 distfiles="https://github.com/dandavison/delta/archive/refs/tags/${version}.tar.gz"
-checksum=1abd21587bcc1f2ef0cd342784ce990da9978bc345578e45506419e0952de714
-
-post_patch() {
-	cargo update --package git2@0.18.2 --precise 0.17.2
-}
+checksum=64717c3b3335b44a252b8e99713e080cbf7944308b96252bc175317b10004f02
 
 post_install() {
 	vlicense LICENSE
