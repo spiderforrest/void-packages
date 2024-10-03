@@ -1,7 +1,7 @@
 # Template file for 'mullvad-vpn'
 pkgname=mullvad-vpn
-version=2024.1
-revision=3
+version=2024.5
+revision=4
 archs="x86_64"
 hostmakedepends=""
 makedepends=""
@@ -12,7 +12,8 @@ license="GPL-3.0-or-later"
 homepage="mullvad.net"
 #changelog=""
 distfiles="https://github.com/mullvad/mullvadvpn-app/releases/download/${version}/MullvadVPN-${version}_amd64.deb"
-checksum=8a8e913941e84818a3d5a87aca2d466e78bac96555a1864a51dec147e19728b8
+checksum=d9de25e412235d069a28e5242bea5962c102567c8aeb33b1d0d92e0b2f63c792
+nopie=yes
 
 
 do_install() {
