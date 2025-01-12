@@ -3,7 +3,7 @@
 # THIS PKG MUST BE SYNCHRONIZED WITH "srcpkgs/thunderbird-i18n".
 #
 pkgname=thunderbird
-version=128.2.3
+version=128.5.2
 revision=1
 build_helper="rust"
 short_desc="Standalone Mail/News reader"
@@ -11,7 +11,7 @@ maintainer="dataCobra <datacobra@thinkbot.de>"
 license="MPL-2.0, GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://www.thunderbird.net/"
 distfiles="${MOZILLA_SITE}/thunderbird/releases/${version}esr/source/thunderbird-${version}esr.source.tar.xz"
-checksum=7ad90cbceb74ba0c7fe466a8032bebeaf29c97d7a48eb7c67c201dadc204dcaa
+checksum=ef932fe30fcc3f90f465feffcf641147d678ec3ecda220f317046e715a905547
 
 lib32disabled=yes
 
