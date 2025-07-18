@@ -1,6 +1,6 @@
 # Template file for 'uv'
 pkgname=uv
-version=0.5.8
+version=0.7.21
 revision=1
 build_style=python3-pep517
 build_helper="rust qemu"
@@ -12,12 +12,12 @@ license="Apache-2.0 OR MIT"
 homepage="https://github.com/astral-sh/uv"
 changelog="https://github.com/astral-sh/uv/raw/main/CHANGELOG.md"
 distfiles="https://github.com/astral-sh/uv/releases/download/${version}/source.tar.gz>uv-${version}.tar.gz"
-checksum=15678d63f626373ae308af25cc5da826def64d384d6fa938c940aba059debb5c
+checksum=07a70f6750bfe68172587acb189a348446efd61c08d18465780d0bba4675e05c
 
 case "$XBPS_TARGET_MACHINE" in
 	i686*)
-		# if parallel, rustc-LLVM ERROR: out of memory Allocation failed
-		disable_parallel_build=yes
+		# rustc-LLVM ERROR: out of memory
+		export CARGO_PROFILE_RELEASE_LTO=false
 		;;
 esac
 

@@ -1,6 +1,6 @@
 # Template file for 'kqtquickcharts'
 pkgname=kqtquickcharts
-version=24.12.0
+version=25.04.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF5_HOST_TOOLING=/usr/lib/cmake
@@ -15,7 +15,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://edu.kde.org/"
 distfiles="${KDE_SITE}/release-service/${version}/src/${pkgname}-${version}.tar.xz"
-checksum=1e2fb9659b12585d3ed75d4c05ac7e0b00f68cbfe6bc52ae4e0df16fe85030e9
+checksum=f1691c48efeea44285a36754697441027d87e078b6c0c421249571441f3179aa
 
 kqtquickcharts-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"

@@ -1,6 +1,6 @@
 # Template file for 'tailscale'
 pkgname=tailscale
-version=1.78.3
+version=1.84.3
 revision=1
 build_style=go
 build_helper="qemu"
@@ -17,7 +17,7 @@ license="BSD-3-Clause"
 homepage="https://tailscale.com"
 changelog="https://tailscale.com/changelog"
 distfiles="https://github.com/tailscale/tailscale/archive/v${version}.tar.gz"
-checksum=bac059152e3fa8ab379ee5ec7a03940114e7ac65c6e1baea4f840f6fadd17d57
+checksum=56bb9498bd688422e1ff570f91afa02db8e234eab818f1e30789328daa00dcdf
 
 post_install() {
 	for sh in bash fish zsh; do
