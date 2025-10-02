@@ -1,6 +1,6 @@
 # Template file for 'vips'
 pkgname=vips
-version=8.17.0
+version=8.17.2
 revision=1
 build_style=meson
 build_helper=gir
@@ -19,7 +19,7 @@ license="LGPL-2.1-or-later"
 homepage="https://www.libvips.org/"
 changelog="https://raw.githubusercontent.com/libvips/libvips/master/ChangeLog"
 distfiles="https://github.com/libvips/libvips/archive/refs/tags/v${version}.tar.gz"
-checksum=41dd9d302dc58d956b62aa991fc2a803b1757fe764a7e1c096ead7c1127fb568
+checksum=66e2c8f0a716a08cf99e46a27535ef4938f1cae110dd9207cf8e992616b36ba7
 python_version=3
 
 build_options="gir hdf5"
