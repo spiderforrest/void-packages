@@ -1,6 +1,6 @@
 # Template file for 'fwupd'
 pkgname=fwupd
-version=2.0.12
+version=2.0.19
 revision=1
 build_style=meson
 build_helper="gir qemu"
@@ -24,7 +24,7 @@ license="LGPL-2.1-or-later"
 homepage="https://github.com/fwupd/fwupd"
 changelog="https://github.com/fwupd/fwupd/releases"
 distfiles="https://github.com/fwupd/fwupd/archive/${version}.tar.gz"
-checksum=046d7301d7b24c78c3cacb479c91523517525f62106a8095b30cb6ba2888ed8a
+checksum=211412d90e3af33f3c46632308fc4a2a66a0d9c6d8443a5b900539555a2503dc
 replaces="fwupdate>=0"
 
 case "$XBPS_TARGET_MACHINE" in

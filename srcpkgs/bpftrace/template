@@ -1,6 +1,6 @@
 # Template file for 'bpftrace'
 pkgname=bpftrace
-version=0.24.0
+version=0.24.2
 revision=1
 _llvmver=18
 archs="x86_64* aarch64* ppc64*"
@@ -15,5 +15,5 @@ maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="Apache-2.0"
 homepage="https://github.com/iovisor/bpftrace/"
 distfiles="https://github.com/iovisor/bpftrace/archive/v${version}.tar.gz"
-checksum=58e89a054734da3e7970065a57ec71eea597fb9434b1fded8b385f8a83d7c3e5
+checksum=e0514aa3e1a032b0b2de2cf3c281bfee9b9e80509498e70ed78786bbd64db373
 nostrip=yes  # needs to read own symbol table
