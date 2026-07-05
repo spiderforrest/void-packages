@@ -1,6 +1,6 @@
 # Template file for 'python3-watchfiles'
 pkgname=python3-watchfiles
-version=1.1.0
+version=1.2.0
 revision=1
 build_style=python3-pep517
 build_helper="rust qemu"
@@ -13,7 +13,7 @@ maintainer="Jason Elswick <jason@jasondavid.us>"
 license="MIT"
 homepage="https://github.com/samuelcolvin/watchfiles"
 distfiles="https://github.com/samuelcolvin/watchfiles/archive/refs/tags/v${version}.tar.gz"
-checksum=15051457d29f8e9a16eaa3ec1714052ff07c1134dd3a74ed46e631d4d821b770
+checksum=5439668773621a3b80fc7bdc603b55d28ba8c8b6a4fc0c5e76bd47864ff4ebfa
 
 post_extract() {
 	rm -f tests/__init__.py

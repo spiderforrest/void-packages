@@ -1,7 +1,7 @@
 # Template file for 'strawberry'
 pkgname=strawberry
-version=1.2.17
-revision=1
+version=1.2.20
+revision=2
 build_style=cmake
 configure_args="-DQT_HOST_PATH=/usr"
 hostmakedepends="pkg-config protobuf gettext qt6-base qt6-tools"
@@ -17,4 +17,4 @@ license="GPL-3.0-or-later"
 homepage="https://www.strawberrymusicplayer.org/"
 changelog="https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/master/Changelog"
 distfiles="https://files.strawberrymusicplayer.org/${pkgname}-${version}.tar.xz"
-checksum=98c988d4c9574681bf0b32b804c4d6b120807034a60ecb2fa8bd7f20ba2e1ca7
+checksum=295387668b01c52eb8a47f2f05bc32feb951caa83a8bf4a799158f454d6a3dcb

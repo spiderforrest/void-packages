@@ -1,6 +1,6 @@
 # Template file for 'rocksndiamonds'
 pkgname=rocksndiamonds
-version=4.4.1.1
+version=4.4.2.2
 revision=1
 build_style=gnu-makefile
 hostmakedepends="pkg-config"
@@ -9,9 +9,9 @@ short_desc="Arcade style game"
 maintainer="Clyhtsuriva <void-packages@adjutor.xyz>"
 license="GPL-2.0-only"
 homepage="http://www.artsoft.org/rocksndiamonds"
-changelog="https://www.artsoft.org/rocksndiamonds/news"
+changelog="https://guest:guest@git.artsoft.org/?p=rocksndiamonds.git;a=blob_plain;f=ChangeLog"
 distfiles="https://www.artsoft.org/RELEASES/linux/${pkgname}/${pkgname}-${version}-linux.tar.gz"
-checksum=40d506f8da02bc168e19dc81ec3ea775b746631f4c8ce8912f83e15c3eab4ce4
+checksum=4bab23cb290775e7c9b7abd7330d1322a2f43b404e4fc3a172a342825069b033
 replaces="rocksndiamonds-data>=0"
 disable_parallel_build=yes
 

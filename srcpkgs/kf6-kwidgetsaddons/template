@@ -1,7 +1,7 @@
 # Template file for 'kf6-kwidgetsaddons'
 pkgname=kf6-kwidgetsaddons
-version=6.23.0
-revision=1
+version=6.25.0
+revision=2
 _llvmver=21
 build_style=cmake
 configure_args="-DBUILD_DESIGNERPLUGIN=ON -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -15,7 +15,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/kwidgetsaddons"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname#kf6-}-${version}.tar.xz"
-checksum=bb25e404f72ae1d897029ad751fe92f4ee3032bbb6cb4693641e1218fdb25eae
+checksum=8a9f9cde4427ffec37a0501d337aadae3de39736674f571ff8a13d17d1e6c938
 
 build_options="python"
 build_options_default="python"
@@ -25,6 +25,10 @@ if [ "$CROSS_BUILD" ]; then
 	configure_args+=" -DSYSROOT_INCLUDE_DIRS=$XBPS_CROSS_BASE/usr/include"
 fi
 export LLVM_INSTALL_DIR=/usr/lib/llvm/${_llvmver}
+
+case "$XBPS_TARGET_MACHINE" in
+	arm*) configure_args+=" -DSHIBOKEN_GENERATOR_EXTRA_FLAGS=--clang-option=-mfloat-abi=hard" ;;
+esac
 
 do_check() {
 	cd build

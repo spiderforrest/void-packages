@@ -1,7 +1,7 @@
 # Template file for 'kf6-knewstuff'
 pkgname=kf6-knewstuff
-version=6.23.0
-revision=1
+version=6.25.0
+revision=2
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -15,7 +15,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/knewstuff"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname#kf6-}-${version}.tar.xz"
-checksum=c2f4bdb71df1f494aceaaced6c34ed45bbab5e69628f82a63919bce675ce2595
+checksum=8c31ef25a7d7389473d12245ae564ad888467b8ef910ac212e16e9334540cd08
 
 kf6-knewstuff-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision} qt6-base-devel

@@ -1,6 +1,6 @@
 # Template file for 'flatpak-kcm'
 pkgname=flatpak-kcm
-version=6.6.1
+version=6.6.3
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
@@ -16,4 +16,4 @@ maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://invent.kde.org/plasma/flatpak-kcm"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=47642ffa62e69f7dc79529f2634db38db2682ca202893ea1e85ac21e344a6486
+checksum=946bb718adae43a5ac7598199eda087a74dcec4cc8d78ecc45aabad2c16a6189

@@ -1,8 +1,8 @@
 # Template file for 'dovecot'
 # revbump dovecot-plugin-pigeonhole when updating dovecot!
 pkgname=dovecot
-version=2.4.2
-revision=2
+version=2.4.4
+revision=1
 build_style=gnu-configure
 configure_args="--with-moduledir=/usr/lib/dovecot/modules --with-sql=plugin
  --disable-static --with-pam --with-mysql --with-pgsql
@@ -13,13 +13,14 @@ hostmakedepends="pkg-config perl libmariadbclient-devel pcre2-devel"
 makedepends=" liblz4-devel zlib-devel bzip2-devel liblzma-devel openssl-devel
  mit-krb5-devel libmariadbclient-devel postgresql-libs-devel sqlite-devel
  libldap-devel libcap-devel pam-devel libcurl-devel expat-devel
- libsodium-devel xapian-core-devel libstemmer-devel pcre2-devel"
+ libsodium-devel xapian-core-devel libstemmer-devel pcre2-devel
+ lua54-devel"
 short_desc="IMAP and POP3 server written with security primarily in mind"
 maintainer="Leah Neukirchen <leah@vuxu.org>"
 license="LGPL-2.1-or-later"
 homepage="https://dovecot.org/"
 distfiles="https://dovecot.org/releases/2.4/dovecot-${version//r/-}.tar.gz"
-checksum=2cd62e4d22b9fc1c80bd38649739950f0dbda34fbc3e62624fb6842264e93c6e
+checksum=670f98d55a29b02ae6a97281e51374e553b94496480ab0a07439571ab30ca8c3
 keep_libtool_archives=yes
 
 if [ "$XBPS_TARGET_LIBC" = "glibc" ]; then

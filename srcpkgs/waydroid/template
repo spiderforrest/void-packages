@@ -1,6 +1,6 @@
 # Template file for 'waydroid'
 pkgname=waydroid
-version=1.6.1
+version=1.6.3
 revision=1
 # https://developer.android.com/ndk/guides/abis#sa
 archs="aarch64* armv7* i686* x86_64*"
@@ -14,7 +14,7 @@ license="GPL-3.0-or-later"
 homepage="https://waydro.id"
 changelog="https://raw.githubusercontent.com/waydroid/waydroid/main/debian/changelog"
 distfiles="https://github.com/waydroid/waydroid/archive/refs/tags/${version}.tar.gz"
-checksum=f81ae0281701942a8beb749397a4fa8ce828c2dc727878b44d1385e23a921bcd
+checksum=f138a287eb8b0be7be7f7060971446490138bc2c8315665c8aa9c2c85576d8a5
 
 python_version=3
 pycompile_dirs="usr/lib/waydroid"

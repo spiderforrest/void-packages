@@ -1,7 +1,7 @@
 # Template file for 'libplasma'
 pkgname=libplasma
-version=6.6.1
-revision=1
+version=6.6.3
+revision=2
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -23,7 +23,7 @@ maintainer="John <me@johnnynator.dev>"
 license="GPL-3.0-or-later"
 homepage="https://invent.kde.org/plasma/libplasma"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=29b64b0107cc92b88ecff0f49e2b2445b4f770903061417c1c9ba05d5f4d2048
+checksum=815ca99f55e68727ffed90b2d0a176f6240a2256454b1089a5a7f266a5a3775c
 
 do_check() {
 	cd build

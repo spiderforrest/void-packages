@@ -1,6 +1,6 @@
 # Template file for 'seaweedfs'
 pkgname=seaweedfs
-version=4.12
+version=4.36
 revision=1
 build_style=go
 go_import_path="github.com/seaweedfs/seaweedfs"
@@ -11,7 +11,7 @@ maintainer="Toyam Cox <Vaelatern@voidlinux.org>"
 license="Apache-2.0"
 homepage="https://github.com/seaweedfs/seaweedfs"
 distfiles="https://github.com/seaweedfs/seaweedfs/archive/${version}.tar.gz"
-checksum=2e245d8c76d8ed0f4a8b1d1833a16df8742c38933174411ce7cb41db55adbf3e
+checksum=91ce1e0006673bcdbf9dcb3419837cf8a1c32880da8dea18ef33808f4a98ef00
 
 case "$XBPS_TARGET_MACHINE" in
 	ppc64*) broken="build constraints exclude all Go files in ...";;

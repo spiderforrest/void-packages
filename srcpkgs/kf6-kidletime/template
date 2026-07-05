@@ -1,7 +1,7 @@
 # Template file for 'kf6-kidletime'
 pkgname=kf6-kidletime
-version=6.23.0
-revision=1
+version=6.25.0
+revision=2
 build_style=cmake
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -14,7 +14,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/kidletime"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname#kf6-}-${version}.tar.xz"
-checksum=4d5e9086d260c9550f1d732d2f6481d34517ba9f571f2e7d76ed9887adb2c97b
+checksum=64e83d46a15b444017c6341e479e229bbd6cbb8320ef1359773737cee89dd7ca
 
 kf6-kidletime-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision} qt6-base-devel"

@@ -1,7 +1,7 @@
 # Template file for 'kf6-kguiaddons'
 pkgname=kf6-kguiaddons
-version=6.23.0
-revision=1
+version=6.25.0
+revision=2
 build_style=cmake
 _llvmver=21
 configure_args="-DKDE_INSTALL_QMLDIR=lib/qt6/qml
@@ -18,7 +18,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/kguiaddons"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname#kf6-}-${version}.tar.xz"
-checksum=b9c5ad9fd8fd8aeff2ae01b1317a0dad3011e4259e50e4f2e5685fee00047b48
+checksum=38850963cb91978d08e781d81b147c7b66f78f4204ad820631e42ab1ef5ef76b
 
 build_options="python"
 build_options_default="python"
@@ -28,6 +28,10 @@ if [ "$CROSS_BUILD" ]; then
 	configure_args+=" -DSYSROOT_INCLUDE_DIRS=$XBPS_CROSS_BASE/usr/include"
 fi
 export LLVM_INSTALL_DIR=/usr/lib/llvm/${_llvmver}
+
+case "$XBPS_TARGET_MACHINE" in
+	arm*) configure_args+=" -DSHIBOKEN_GENERATOR_EXTRA_FLAGS=--clang-option=-mfloat-abi=hard" ;;
+esac
 
 kf6-kguiaddons-geo-uri-handler_package() {
 	short_desc+=" - Geo URI handler"

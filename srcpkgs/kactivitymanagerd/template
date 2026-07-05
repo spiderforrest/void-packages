@@ -1,7 +1,7 @@
 # Template file for 'kactivitymanagerd'
 pkgname=kactivitymanagerd
-version=6.6.1
-revision=1
+version=6.6.3
+revision=2
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="extra-cmake-modules gettext qt6-base qt6-tools kf6-kconfig"
@@ -12,4 +12,4 @@ maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later"
 homepage="https://invent.kde.org/plasma/kactivitymanagerd"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=bef68b4bbeb36b0da8f3b5b5931d7bec5a7f57fc89ea21f46ea099ca2fc14705
+checksum=858bea71cc64bb2922ef06d5c125b5addaea2d8c095bf3dc8875a25f5b8c3341

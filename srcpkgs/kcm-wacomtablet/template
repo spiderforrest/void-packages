@@ -1,7 +1,7 @@
 # Template file for 'kcm-wacomtablet'
 pkgname=kcm-wacomtablet
-version=6.6.1
-revision=1
+version=6.6.3
+revision=2
 build_style=cmake
 configure_args="-DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
@@ -22,7 +22,7 @@ maintainer="Piraty <mail@piraty.dev>"
 license="GPL-2.0-or-later"
 homepage="https://invent.kde.org/plasma/wacomtablet"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname#kcm-}-${version}.tar.xz"
-checksum=5a8b6917d47f25cf1b956d6d28d5eea709fb4e597e4e75a655db0ef28a3a0847
+checksum=74e9c6dafa85258c99323dd5338653a899037b333f5ac91c0df4c42340ea7ab3
 
 do_check() {
 	cd build

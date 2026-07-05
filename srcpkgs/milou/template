@@ -1,7 +1,7 @@
 # Template file for 'milou'
 pkgname=milou
-version=6.6.1
-revision=1
+version=6.6.3
+revision=2
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF -DKF6_HOST_TOOLING=/usr/lib/cmake
  -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins
@@ -16,4 +16,4 @@ maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://invent.kde.org/plasma/milou"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=339b4d2216b107a11b09b623c4ed61dbb5e9213590795b402b91c48db597de51
+checksum=909834cd7c62de83255a97090c685903ed6245b50be9c15d299703d9b822f9fd

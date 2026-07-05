@@ -1,7 +1,7 @@
 # Template file for 'easyeffects'
 pkgname=easyeffects
-version=8.0.9
-revision=4
+version=8.2.7
+revision=2
 build_style=cmake
 hostmakedepends="pkg-config desktop-file-utils extra-cmake-modules gettext glib-devel
  kf6-kconfig qt6-base qt6-declarative-tools qt6-declarative-private-devel"
@@ -17,12 +17,13 @@ makedepends="
 depends="qt6-graphs kf6-kirigami kf6-qqc2-desktop-style kirigami-addons
  libportal-qt6"
 short_desc="Sound effects for systems using PipeWire"
-maintainer="zenobit <zenobit@disroot.org>"
+maintainer="zenobit <zen@osowoso.org>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/wwmm/easyeffects"
 changelog="https://raw.githubusercontent.com/wwmm/easyeffects/refs/heads/master/src/contents/docs/community/CHANGELOG.md"
 distfiles="https://github.com/wwmm/easyeffects/archive/v${version}.tar.gz"
-checksum=23ac1108a7f679903c37e566d39d2aec745823449014170b7eb91758ad5e9a0a
+checksum=b6374830282c34b90ace1a2c684d3675e5e00f8f73dffc4778105232f5482e13
+replaces="pulseeffects>=0"
 
 pulseeffects_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
