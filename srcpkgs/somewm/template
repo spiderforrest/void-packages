@@ -1,0 +1,70 @@
+# Template file for 'somewm'
+pkgname=somewm
+# devs use luijit features (backported 5.2> features) less than a week after them getting pushed to luajit
+# while waiting for a real package maintainer to update luajit, either use older version or non luajit
+version=1.4.0
+version=1.4.2
+revision=1
+short_desc="AwesomeWM ported to Wayland - 100% Lua API compatible"
+maintainer="Spider Forrest<spider@spiderforrest.com>"
+homepage="https://somewm.org"
+license="GPL-3.0-or-later"
+archs="x86_64"
+
+distfiles="https://github.com/trip-zip/somewm/archive/v${version}.tar.gz"
+# 1.4.0
+checksum=799bd0fd01f68899fbeb28d83d9dba6633f5e6e33767748d9c10e8e1354adb5a
+# 1.4.2
+checksum=408a9b4513d3cbff0277d72b1c963b6785f2772523e9752a3ab66ec13a9acf6c
+
+build_options="luajit"
+build_options_default="luajit"
+
+build_style=meson
+# 1.4.0
+configure_args="--wrap-mode=default -Db_sanitize=none -Dwerror=false --auto-features=enabled -Dwerror=false -Db_ndebug=false -Dsystemd=disabled $(vopt_if luajit -Dlua_pkg=luajit)"
+# 1.4.2
+configure_args="--wrap-mode=default -Db_sanitize=none -Dwerror=false --auto-features=enabled -Dwerror=false -Db_ndebug=false -Dsystemd=disabled $(vopt_if luajit -Dlua_pkg=luajit -Dlua_pkg=lua5.4)"
+hostmakedepends="pkg-config"
+
+makedepends="
+	$(vopt_if luajit LuaJIT-devel lua54-devel)
+	$(vopt_if luajit lua51-lgi lua54-lgi)
+	wayland-devel
+	wayland-protocols
+	libxkbcommon-devel
+	libinput-devel
+	eudev-libudev-devel
+	libdrm-devel
+	dbus-devel
+	glib-devel
+	cairo-devel
+	pango-devel
+	gdk-pixbuf-devel
+	wlroots0.19-devel
+	pam-devel
+"
+depends="
+	$(vopt_if luajit LuaJIT lua54)
+	$(vopt_if luajit lua51-lgi lua54-lgi)
+	cairo
+	dbus
+	gdk-pixbuf
+	glib
+ 	libdisplay-info
+	libdrm
+	libinput
+	libliftoff
+	libxcb
+	pango
+	pixman
+	seatd
+	vulkan-loader
+  xcb-util-errors
+  xcb-util-renderutil
+  xcb-util-wm
+"
+
+post_install() {
+	vlicense LICENSE
+}
